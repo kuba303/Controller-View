@@ -7,12 +7,18 @@ namespace ViewApp;
 require_once("src/utils/debug.php");
 // View class
 require_once("src/View.php");
+// Controller class
+require_once("src/Controller.php");
+
 // set const action
 const DEFAULT_ACTION = 'home';
 
 // what on url??
 $action = $_GET['action'] ?? DEFAULT_ACTION;
 
+$controller = new Controller();
+$controller->run();
+dump($controller);
 //imp View
 $view = new View();
 // parametry do wyswietlania
