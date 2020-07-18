@@ -10,26 +10,30 @@ require_once("src/View.php");
 class Controller
 {
 
+  private const DEFAULT_ACTION = 'home';
+
+
+  private array $getData;
   private array $postData;
 
-  public function __construct(array $postData)
+
+
+  public function __construct(array $getData, array $postData)
   {
+    $this->getData = $getData;
     $this->postData = $postData;
   }
 
-  public function run(string $action): void
+  public function run(): void
   {
-
+    $action = $this->getData['action'] ?? self::DEFAULT_ACTION;
     //imp View
     $view = new View();
     // parametry do wyswietlania
     $viewParams = [];
 
     switch ($action) {
-        // case 'home':
-        //   $viewParams['mamyDom'] = "udalo sie dom";
-        //   $page = 'home';
-        //   break;
+
       case 'option1':
         $viewParams['opcja1'] = "udalo sie opcja1";
         $page = 'option1';
