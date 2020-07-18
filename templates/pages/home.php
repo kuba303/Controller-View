@@ -3,4 +3,4 @@
   <div>
     <?php echo $params['mamyDom']; ?>
   </div>
-</main>;
+</main>
