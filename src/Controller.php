@@ -5,11 +5,18 @@ declare(strict_types=1);
 namespace ViewApp;
 
 require_once("src/utils/debug.php");
+require_once("src/View.php");
 
 class Controller
 {
   public function run(string $action): void
   {
+
+    //imp View
+    $view = new View();
+    // parametry do wyswietlania
+    $viewParams = [];
+
     switch ($action) {
         // case 'home':
         //   $viewParams['mamyDom'] = "udalo sie dom";
@@ -37,5 +44,7 @@ class Controller
         $page = 'home';
         break;
     }
+
+    $view->render($page, $viewParams);
   }
 }
