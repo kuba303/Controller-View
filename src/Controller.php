@@ -9,6 +9,14 @@ require_once("src/View.php");
 
 class Controller
 {
+
+  private array $postData;
+
+  public function __construct(array $postData)
+  {
+    $this->postData = $postData;
+  }
+
   public function run(string $action): void
   {
 
