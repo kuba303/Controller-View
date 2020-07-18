@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.nav {
+  flex-basis: 15%;
+  background-color: pink;
+  height: 100vh;
+
+}
+
+.menu {
+  list-style-type: none;
+  padding: 1em 0 0 0.5em;
+}
+
+.menu>li {
+  margin: 1em;
+  text-decoration: none;
+}
+
+.menu>li>button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+}
+
+.menu>li>button>a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.main {
+  background-color: black;
+  width: 85vw;
+  height: 100vh;
+  flex-basis: 85%;
+  color: beige;
+}
