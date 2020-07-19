@@ -23,10 +23,11 @@ class Controller
     $this->getData = $getData;
     $this->postData = $postData;
   }
-
+  // this->getData['action]=url!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   public function run(): void
   {
     $action = $this->getData['action'] ?? self::DEFAULT_ACTION;
+    dump($action);
     //imp View
     $view = new View();
     // parametry do wyswietlania
